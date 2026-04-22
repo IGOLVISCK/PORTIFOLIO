@@ -1,0 +1,343 @@
+/* --- Variáveis e Reset --- */
+:root {
+    --bg-color: #0f172a;       /* Azul escuro profundo */
+    --card-bg: #1e293b;        /* Azul ardósia para cartões */
+    --text-primary: #e2e8f0;   /* Branco gelo */
+    --text-secondary: #94a3b8; /* Cinza azulado */
+    --accent: #38bdf8;         /* Ciano Neon */
+    --accent-hover: #0ea5e9;
+    --font-main: 'Poppins', sans-serif;
+    --font-code: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Scrollbar Personalizada --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+    padding: 1.5rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-family: var(--font-code);
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* --- Seções Gerais --- */
+section {
+    padding: 80px 10%;
+    min-height: 80vh; /* Ocupa pelo menos 80% da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.destaque {
+    color: var(--accent);
+}
+
+/* --- Hero Section (Início) --- */
+#inicio {
+    text-align: left;
+    height: 100vh;
+    background: radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 20%);
+}
+
+.ola {
+    color: var(--accent);
+    font-family: var(--font-code);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.nome-destaque {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.digitando {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Botões --- */
+.botao {
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent);
+    display: inline-block;
+}
+
+.botao.primario {
+    background-color: var(--accent);
+    color: var(--bg-color);
+}
+
+.botao.primario:hover {
+    background-color: transparent;
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.botao.secundario {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.botao.secundario:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* --- Sobre Mim --- */
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    box-shadow: 10px 10px 0px rgba(56, 189, 248, 0.2); /* Sombra sólida estilosa */
+    transition: transform 0.3s;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.02);
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+.texto-sobre p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.skills {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: rgba(255,255,255,0.05);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* --- Projetos (Grid Moderno) --- */
+.galeria-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.projeto {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.5);
+    border-color: var(--accent);
+}
+
+.projeto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.icone-projeto {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.projeto p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.techs {
+    margin-bottom: 20px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.techs span {
+    margin-right: 15px;
+}
+
+.links-projeto {
+    display: flex;
+    gap: 15px;
+}
+
+.links-projeto a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.links-projeto a:hover {
+    color: var(--accent);
+}
+
+/* --- Contato --- */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-contato {
+    background-color: var(--card-bg);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.card-contato i {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.card-contato:hover {
+    background-color: rgba(56, 189, 248, 0.05);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b1120;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* --- Animações (Classes controladas pelo JS) --- */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* Animação para cards de projeto (efeito cascata) */
+.projeto:nth-child(2) { transition-delay: 200ms; }
+.projeto:nth-child(3) { transition-delay: 400ms; }
+.projeto:nth-child(4) { transition-delay: 600ms; }
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .nome-destaque { font-size: 2.5rem; }
+    .sobre-conteudo { flex-direction: column; text-align: center; }
+    .botoes-hero { justify-content: center; }
+    nav .menu-links { display: none; } /* Simples para mobile, ideal seria menu hambúrguer */
+    nav { justify-content: center; }
+}

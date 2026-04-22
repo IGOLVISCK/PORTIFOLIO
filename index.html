@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Reis | Desenvolvedor Full Stack</title>
+    <link rel="icon" type="image/x-icon" href="imgs/fotoperfil.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#inicio" class="logo">&lt;IgorReis /&gt;</a>
+            <div class="menu-links">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="perfil-container hidden">
+                <p class="ola">Olá, meu nome é</p>
+                <h1 class="nome-destaque">Igor Reis</h1>
+                <h2 class="digitando">Desenvolvedor <span class="txt-type" data-wait="3000" data-words='["Full Stack", "Python", "Web", "Backend"]'></span></h2>
+                
+                <div class="botoes-hero">
+                    <a href="#projetos" class="botao primario">Ver Projetos</a>
+                    <a href="#contato" class="botao secundario">Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="hidden">
+            <h2 class="titulo-secao">Sobre <span class="destaque">Mim</span></h2>
+            <div class="sobre-conteudo">
+                <div class="img-wrapper">
+                    <img src="imgs/fotoperfil.jpeg" alt="Foto de perfil Igor Reis" class="foto-perfil">
+                </div>
+                <div class="texto-sobre">
+                    <p>Sou estudante de <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>, apaixonado por criar soluções tecnológicas. Minha jornada envolve tanto o Front-end quanto o Back-end, sempre com foco em código limpo e eficiente.</p>
+                    <p>Tenho grande interesse em arquitetura de sistemas e bancos de dados, buscando sempre entender como as aplicações funcionam "debaixo do capô" para entregar a melhor performance.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> API Rest</span>
+                    </div>
+
+                    <a href="doc/Curriculo_Igor_Reis_.pdf" class="botao primario" download><i class="fas fa-download"></i> Baixar Currículo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="hidden">
+            <h2 class="titulo-secao">Meus <span class="destaque">Projetos</span></h2>
+            <div class="galeria-projetos">
+                
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fa-solid fa-calendar icone-projeto"></i>
+                        <h3>Jarvis - Assistente Virtual</h3>
+                    </div>
+                    <p>Assistente virtual por comando de voz</p>
+                    <p>Criei meu Jarvis em python utilizando bibliotecas de reconhecimento de voz, ele consegue interagir com app's, sites e até mesmo com a luz do meu quarto</p>
+                    <p>Video do funcionamento do Jarvis no Linkedin</p>
+                    <div class="techs">
+                        <span>Python</span><span>Inteligencia Artificial</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/JARVISassistent" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7452823998792613888/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fa-solid fa-calendar icone-projeto"></i>
+                        <h3>Agendamento de visitas</h3>
+                    </div>
+                    <p>Sistema de agendamento de visitas real. LOGIN PARA VISUALIZAÇÃO:</p>
+                    <p> Login: loginpublico@gmail.com</p>
+                    <p>Senha: 123456</p>
+                    <div class="techs">
+                        <span>Ract(vite)</span><span>FireBase</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/Agendamento-Visitas" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://agendamento-de-visitas-1b504.web.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fab fa-discord icone-projeto"></i>
+                        <h3>PQGBOT Discord</h3>
+                    </div>
+                    <p>Bot de administração e automação para servidores, focado em segurança e organização.</p>
+                    <div class="techs">
+                        <span>Python</span><span>API</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/PQGBOT" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://igolvisck.github.io/PQGBOT-SITE/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fas fa-link icone-projeto"></i>
+                        <h3>Links Filomena</h3>
+                    </div>
+                    <p>Hub de links institucionais centralizado para o Colégio Filomena de Marco.</p>
+                    <div class="techs">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/LinksFilomenadeMarco" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://igolvisck.github.io/LinksFilomenadeMarco/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fas fa-calculator icone-projeto"></i>
+                        <h3>Sistema Aprovação</h3>
+                    </div>
+                    <p>Sistema Web para cálculo de médias escolares e controle de faltas.</p>
+                    <div class="techs">
+                        <span>JS</span><span>Lógica</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/SistemaDeAprovacao" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://igolvisck.github.io/SistemaDeAprovacao/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+
+                <div class="projeto">
+                    <div class="projeto-header">
+                        <i class="fas fa-gamepad icone-projeto"></i>
+                        <h3>Secret Number</h3>
+                    </div>
+                    <p>Jogo de adivinhação interativo com modos Solo e 1x1 para treinar DOM.</p>
+                    <div class="techs">
+                        <span>JavaScript</span><span>DOM</span>
+                    </div>
+                    <div class="links-projeto">
+                        <a href="https://github.com/IGOLVISCK/SecreteNumber" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://igolvisck.github.io/SecreteNumber/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="hidden">
+            <h2 class="titulo-secao">Entre em <span class="destaque">Contato</span></h2>
+            <div class="contato-container">
+                <a href="mailto:devigorreis@gmail.com" class="card-contato">
+                    <i class="fas fa-envelope"></i>
+                    <span>devigorreis@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/igor-reis-9313a233b/" target="_blank" class="card-contato">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/IGOLVISCK" target="_blank" class="card-contato">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Igor Reis. Desenvolvido com <i class="fas fa-code"></i> e <i class="fas fa-coffee"></i>.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
